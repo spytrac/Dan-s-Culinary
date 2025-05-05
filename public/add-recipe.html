@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe - Recipe Platform</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dan's Culinary</h1>
+             <nav id="main-nav">
+                <a href="/">Home</a>
+                <span id="auth-links">
+                    <a href="/login.html">Login</a>
+                    <a href="/register.html">Register</a>
+                </span>
+                <span id="user-links" style="display: none;">
+                     <a href="/add-recipe.html">Add Recipe</a>
+                     <a href="/profile.html" id="profile-link">Profile</a>
+                     <button id="logout-button">Logout</button>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Add a New Recipe</h2>
+        <form id="add-recipe-form"> <!-- No action/method needed, handled by JS -->
+            <div>
+                <label for="title">Recipe Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div>
+                <label for="ingredients">Ingredients (one per line):</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+            </div>
+            <div>
+                <label for="instructions">Instructions (one step per line):</label>
+                <textarea id="instructions" name="instructions" required></textarea>
+            </div>
+             <div>
+                <label for="imageUrl">Image URL (Optional):</label>
+                <input type="url" id="imageUrl" name="imageUrl">
+            </div>
+            <button type="submit">Add Recipe</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2023 CSc 337 Project</p>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="/js/recipe.js"></script> <!-- JS for form submission -->
+</body>
+</html>

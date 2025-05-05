@@ -1,0 +1,30 @@
+{
+  "name": "Dan-Cullinary-Creations",
+  "version": "1.0.0",
+  "description": "A simple recipe sharing web application for CSc 337",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "recipe",
+    "node",
+    "express",
+    "mongodb",
+    "cors",
+    "mongoose",
+    "body-parser"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3", 
+    "express": "^4.18.2", 
+    "express-session": "^1.17.3", 
+    "mongodb": "^6.0.0",
+    "cors": "^2.8.5",
+    "mongoose": "^6.0.0",
+    "body-parser": "^1.19.0" 
+  }
+}

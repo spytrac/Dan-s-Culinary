@@ -1,0 +1,71 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register - Recipe Platform</title>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>Dan's Culinary</h1>
+				<nav id="main-nav">
+					<a href="/">Home</a>
+					<span id="auth-links">
+						<a href="/login.html">Login</a>
+						<a href="/register.html">Register</a>
+					</span>
+					<span id="user-links" style="display: none">
+						<a href="/add-recipe.html">Add Recipe</a>
+						<a href="/profile.html" id="profile-link">Profile</a>
+						<button id="logout-button">Logout</button>
+					</span>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container">
+			<h2>Register</h2>
+			<form action="/register" method="POST" id="register-form">
+				<!-- Inside the <form> in register.html -->
+				<div>
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" required />
+				</div>
+				<div>
+					<label for="password">Password:</label>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						required
+					/>
+				</div>
+				<div>
+					<label for="confirm-password">Confirm Password:</label>
+					<input
+						type="password"
+						id="confirm-password"
+						name="confirm_password"
+						required
+					/>
+					{/* Add this input */}
+				</div>
+				<button type="submit">Register</button>
+			</form>
+			<p style="text-align: center">
+				Already have an account? <a href="/login.html">Login here</a>
+			</p>
+		</main>
+
+		<footer>
+			<p>© 2023 CSc 337 Project</p>
+		</footer>
+		<script src="/js/main.js"></script>
+		<!-- Optional: Add auth.js if you need client-side validation -->
+		<script src="/js/auth.js"></script>
+	</body>
+</html>

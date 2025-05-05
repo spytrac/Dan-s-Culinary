@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    text-align: center; /* Center header content */
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a, header nav button {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin: 0 5px;
+    display: inline-block; /* Align items nicely */
+}
+
+header nav button {
+    background: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-family: inherit; /* Match font */
+}
+
+
+header nav a:hover, header nav button:hover {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px; /* Add space below header */
+    min-height: 400px; /* Ensure footer doesn't jump up */
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #35424a;
+    text-align: center;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: 20px auto; /* Center forms */
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="url"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+form button, input[type="submit"] { /* Style both button and submit inputs */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e8491d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+form button:hover, input[type="submit"]:hover {
+    background-color: #35424a;
+}
+
+/* Recipe List Styles */
+#recipe-list, #search-results {
+    margin-top: 20px;
+}
+
+.recipe-summary, .spoonacular-result {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.recipe-summary h3, .spoonacular-result h4 {
+    margin-top: 0;
+    color: #35424a;
+}
+
+.recipe-summary h3 a {
+    text-decoration: none;
+    color: #e8491d;
+}
+.recipe-summary h3 a:hover {
+    text-decoration: underline;
+}
+
+.recipe-summary p, .spoonacular-result p {
+    margin-bottom: 5px;
+}
+
+.recipe-summary em, .spoonacular-result em {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.recipe-summary img, .spoonacular-result img {
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 3px;
+    display: block; /* Prevent extra space below image */
+}
+
+/* Recipe Detail Styles */
+#recipe-detail h2 {
+    color: #e8491d;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+#recipe-detail h3 {
+    color: #35424a;
+    margin-top: 20px;
+}
+
+#recipe-detail ul, #recipe-detail ol {
+    padding-left: 20px;
+}
+
+#recipe-detail li {
+    margin-bottom: 8px;
+}
+
+#recipe-detail img {
+    max-width: 400px; /* Larger image for detail */
+    height: auto;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    padding: 3px;
+    background: #fff;
+}
+
+/* Search Section */
+#spoonacular-search input[type="text"] {
+    width: calc(100% - 100px); /* Adjust width considering button */
+    padding: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#spoonacular-search button {
+    width: 80px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Utility */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive (Very Basic Example) */
+@media(max-width: 768px){
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav a, header nav button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    #spoonacular-search input[type="text"] {
+        width: calc(100% - 90px);
+    }
+}

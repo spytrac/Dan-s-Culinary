@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dan's Culinary</h1>
+             <nav id="main-nav">
+                <a href="/">Home</a>
+                <span id="auth-links">
+                    <a href="/login.html">Login</a>
+                    <a href="/register.html">Register</a>
+                </span>
+                <span id="user-links" style="display: none;">
+                     <a href="/add-recipe.html">Add Recipe</a>
+                     <a href="/profile.html" id="profile-link">Profile</a>
+                     <button id="logout-button">Logout</button>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>User Profile</h2>
+        <div id="profile-info">
+            <!-- Profile info could be loaded here by JS -->
+            <p>Welcome, <span id="profile-username">User</span>!</p>
+            <p>This is your profile page. Future features could include:</p>
+            <ul>
+                <li>Viewing recipes you've submitted</li>
+                <li>Editing your profile</li>
+                <li>Changing your password</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 CSc 337 Project</p>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script>
+        // Simple script to update username on profile page
+        document.addEventListener('DOMContentLoaded', () => {
+            const profileUsernameSpan = document.getElementById('profile-username');
+             fetch('/api/user/status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.loggedIn && profileUsernameSpan) {
+                        profileUsernameSpan.textContent = data.user.username;
+                    } else if (!data.loggedIn) {
+                        // Redirect if not logged in and trying to access profile
+                        window.location.href = '/login.html';
+                    }
+                })
+                .catch(error => console.error('Error fetching user status for profile:', error));
+        });
+    </script>
+</body>
+</html>

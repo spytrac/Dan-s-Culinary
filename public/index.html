@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan's Culinary</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dan's Culinary</h1>
+            <nav id="main-nav">
+                <a href="/">Home</a>
+                <span id="auth-links">
+                    <a href="/login.html">Login</a>
+                    <a href="/register.html">Register</a>
+                </span>
+                <span id="user-links" style="display: none;">
+                     <a href="/add-recipe.html">Add Recipe</a>
+                     <a href="/profile.html" id="profile-link">Profile</a>
+                     <button id="logout-button">Logout</button>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="user-recipes">
+            <h2>Our Community Recipes</h2>
+            <div id="recipe-list">
+                <!-- User recipes will be loaded here by JS -->
+                <p>Loading recipes...</p>
+            </div>
+        </section>
+
+        <hr style="margin: 30px 0;">
+
+        <section id="spoonacular-search">
+            <h2>Search External Recipes (Spoonacular)</h2>
+            <input type="text" id="search-query" placeholder="Search for recipes (e.g., pasta)">
+            <button id="search-button">Search</button>
+            <div id="search-results">
+                <!-- Spoonacular search results will be loaded here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 CSc 337 Project</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/recipe.js"></script>
+    <script src="/js/search.js"></script>
+</body>
+</html>
