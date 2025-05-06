@@ -40,7 +40,7 @@ A web application built with Node.js, Express, and MongoDB where users can share
     ```
     or download the zip file.
     ```bash
-    cd dan-s-culinary
+    cd Dan\'s culinary
     ```
 2.  **Install dependencies:**
     ```bash
