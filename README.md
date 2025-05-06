@@ -2,6 +2,10 @@
 
 A web application built with Node.js, Express, and MongoDB where users can share and find recipes.
 
+## Contributors
+*   Anuj Jariwala
+*   Advait Khopade
+
 ## Features
 
 *   User registration and login system.
@@ -32,7 +36,7 @@ A web application built with Node.js, Express, and MongoDB where users can share
 1.  **Clone the repository:**
     ```bash
     git clone <your-repo-url>
-    cd recipe-sharing-platform
+    cd dan-s-culinary
     ```
 2.  **Install dependencies:**
     ```bash
