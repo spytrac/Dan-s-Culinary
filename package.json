@@ -16,7 +16,7 @@
     "mongoose",
     "body-parser"
   ],
-  "author": "Your Name",
+  "author": "Anuj Jariwala, Advait Khopade",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3", 
