@@ -35,7 +35,11 @@ A web application built with Node.js, Express, and MongoDB where users can share
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
+    git clone <your-repo-url> 
+    cd <your-repo-name>
+    ```
+    or download the zip file.
+    ```bash
     cd dan-s-culinary
     ```
 2.  **Install dependencies:**
